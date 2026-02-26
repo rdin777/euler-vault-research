@@ -27,5 +27,11 @@ This repository contains technical deep dives and Proof-of-Concept (PoC) scripts
 * **Framework:** Foundry / Hardhat
 * **Tooling:** Slither, custom fuzzing scripts.
 
+## Technical Analysis
+Euler Vaults uses fixed-point arithmetic.
+My analysis focused on the accumulation of rounding errors:
+$$totalBorrows_{new} = totalBorrows_{old} \times (1 + r \times \Delta t)$$
+Where even a minimal deviation of $1\ wei$ at a high transaction frequency can affect the protocol balance.
+
 ---
 *Note: These reports were submitted via Cantina. This repository serves as a personal archive of technical research.*
