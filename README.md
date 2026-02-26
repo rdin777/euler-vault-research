@@ -33,5 +33,14 @@ My analysis focused on the accumulation of rounding errors:
 $$totalBorrows_{new} = totalBorrows_{old} \times (1 + r \times \Delta t)$$
 Where even a minimal deviation of $1\ wei$ at a high transaction frequency can affect the protocol balance.
 
+## 🚀 Reproducing the Findings
+
+This repository uses **Foundry**. To run the Proof-of-Concept (PoC) scripts for each finding:
+
+### 1. Zero-Value Liquidation (Free Collateral)
+Demonstrates how collateral can be claimed without debt repayment under specific conditions.
+```bash
+forge test --match-path test/FreeCollateral.t.sol -vv
+
 ---
 *Note: These reports were submitted via Cantina. This repository serves as a personal archive of technical research.*
