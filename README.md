@@ -42,5 +42,14 @@ Demonstrates how collateral can be claimed without debt repayment under specific
 ```bash
 forge test --match-path test/FreeCollateral.t.sol -vv
 
+2. Protocol Fee Leak Analysis
+Simulates frequent interest cache updates to analyze systematic fee discrepancies.
+forge test --match-path test/FeeLeak.t.sol -vv
+
+3. Precision & Rounding Math
+Deep dive into interest rate compounding and rounding errors in totalBorrows.
+forge test --match-path test/AuditMath.t.sol -vv
+
+
 ---
 *Note: These reports were submitted via Cantina. This repository serves as a personal archive of technical research.*
